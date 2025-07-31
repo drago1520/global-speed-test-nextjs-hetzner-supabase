@@ -1,13 +1,13 @@
-import { db } from "@/lib/drizzle";
+import { db2 } from "@/lib/drizzle";
 
 export default async function Page() {
   const startTime = performance.now();
-  const todos = await db.query.todo.findMany()
+  const todos = await db2.query.todo.findMany()
   const endTime = performance.now();
   const latencyMs = endTime - startTime;
   return (
     <>
-      <h1>This is Coolify DB</h1>
+      <h1>This is Neon DB without global read replicas</h1>
       <pre>
         {new Date().toLocaleTimeString()}
         DB Query latency: {latencyMs.toFixed(2)}
