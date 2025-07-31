@@ -8,6 +8,7 @@ export default async function Page() {
   return (
     <>
       <h1>This is Coolify DB</h1>
+      <button><a href="/neon-no">Neon No replicas test node-postgres</a></button>
       <pre>
         {new Date().toLocaleTimeString()}
         DB Query latency: {latencyMs.toFixed(2)}
